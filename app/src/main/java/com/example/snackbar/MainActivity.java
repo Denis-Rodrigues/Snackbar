@@ -11,7 +11,6 @@ import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
   private  Button btnSnackbar, btnfechar;
-  private Snackbar snackbar;
 
   @Override
   protected void onCreate (Bundle savedInstanceState) {
@@ -27,23 +26,23 @@ public class MainActivity extends AppCompatActivity {
         //Snackbar.make(view, "Botão pressionado", Snackbar.LENGTH_LONG).show();
         //Snackbar.make(view, "Botão pressionado", Snackbar.LENGTH_INDEFINITE).show();
         //Snackbar.make(view, "Botão pressionado", Snackbar.LENGTH_LONG).setAction("Confirmar", new View.OnClickListener( ) {
-        snackbar = Snackbar.make(view, "Botão pressionado", Snackbar.LENGTH_INDEFINITE).setAction("Confirmar", new View.OnClickListener( ) {
+//        Snackbar.make(view, "Botão pressionado", Snackbar.LENGTH_INDEFINITE).setAction("Confirmar", new View.OnClickListener( ) {
+        Snackbar.make(view, "Botão pressionado", Snackbar.LENGTH_LONG).setAction("Confirmar", new View.OnClickListener( ) {
 
           @Override
           public void onClick (View v) {
-            btnSnackbar.setText("Botão abrir alterado!");
+            //btnSnackbar.setText("Botão abrir alterado!");
           }
-        });
-        snackbar.show( );
+        }).setActionTextColor(getResources().getColor(R.color.colorAccent)).show();
       }
     });
 
-    btnfechar.setOnClickListener(new View.OnClickListener( ) {
+   /* btnfechar.setOnClickListener(new View.OnClickListener( ) {
       @Override
       public void onClick (View v) {
-        
+
         snackbar.dismiss( );
       }
-    });
+    });*/
   }
 }
